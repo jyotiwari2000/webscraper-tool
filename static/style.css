@@ -1,0 +1,45 @@
+/* style.css */
+
+/* Body style */
+body {
+    font-family: Arial, sans-serif;
+}
+
+/* Header style */
+h1 {
+    color: #333;
+}
+
+/* Table style */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+/* Table header style */
+th {
+    background-color: #f2f2f2;
+    text-align: left;
+    padding: 8px;
+    border: 1px solid #ddd;
+}
+
+/* Table row style */
+td {
+    padding: 8px;
+    border: 1px solid #ddd;
+}
+
+/* Status code color changes */
+td.status-code {
+    color: black;
+}
+
+td.status-code-200 {
+    color: green;
+}
+
+td.status-code-301 {
+    color: red;
+}

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Scraping Results</title>
+    <style>
+        /* Define styles for the table */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 8px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        th {
+            background-color: #3498db; /* Change the background color here */
+            color: white; /* Change the text color for better contrast */
+        }
+        body {
+            background-color: rgb(217, 243, 234);
+        }
+        /* Define different background colors based on status */
+        .status-200 {
+            background-color: #5cb85c; /* Green color for 200 status */
+        }
+        .status-302 {
+            background-color: #5bc0de; /* Blue color for 302 status */
+        }
+        .status-404 {
+            background-color: #d9534f; /* Red color for 404 status */
+        }
+    </style>
+</head>
+<body>
+    <h1>Scraping Results</h1>
+    <div id="results">
+        {% if excel_data %}
+            <table border="1">
+                <tr>
+                    <th>URL</th>
+                    <th>Label</th>
+                    <th>Status</th>
+                    <th>Server</th>
+                    <th>Redirected URL</th>
+                    <th>Redirected Status</th>
+                    <th>Redirected Server</th>
+                </tr>
+                {% for row in excel_data %}
+                    <tr>
+                        {% for cell in row %}
+                            {% if cell == '200' %}
+                                <td class="status-200">{{ cell }}</td>
+                            {% elif cell == '302' %}
+                                <td class="status-302">{{ cell }}</td>
+                            {% elif cell == '404' %}
+                                <td class="status-404">{{ cell }}</td>
+                            {% else %}
+                                <td>{{ cell }}</td>
+                            {% endif %}
+                        {% endfor %}
+                    </tr>
+                {% endfor %}
+            </table>
+        {% endif %}
+    </div>
+</body>
+</html>

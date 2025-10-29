@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Web Scraping Tool</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 0;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-top: 50px;
+            font-weight: 600;
+        }
+        form {
+            text-align: center;
+            margin-top: 30px;
+        }
+        label {
+            display: block;
+            font-size: 18px;
+            color: #444;
+            margin-bottom: 8px;
+        }
+        input[type="text"] {
+            width: 300px;
+            padding: 10px;
+            margin: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        input[type="submit"] {
+            padding: 12px 25px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+        }
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+        #results {
+            margin-top: 50px;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    </style>
+</head>
+<body>
+    <h1>Web Scraping Tool</h1>
+    <form action="/scrape" method="post">
+        <label for="url">Enter URL:</label>
+        <input type="text" id="url" name="url" placeholder="https://example.com">
+        <input type="submit" value="Scrape">
+    </form>
+    
+</body>
+</html>
